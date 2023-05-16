@@ -108,7 +108,7 @@ fila representa un departamento y contiene la siguiente información:
 </small>
 
 Diagrama Entidad Relacion
-<img src="Proyecto_Final.png" width="600" height="400">
+<img src="/img/Proyecto_Final.png" width="600" height="400">
 
 
 # 4. Análisis exploratorio
@@ -157,31 +157,43 @@ Para el desarrollo se va trabajar cada tarea de la siguiente forma:
 
 ## Se ejecutan los archivos ADESpark para las pruebas de Spark
 
+
 # 6. Resultados
 
 Para las solicitudes de análisis en Pandas implemente el archivo ADE.ipynb.
 Para las solicitudes de análisis en Spark implemente el archivo ADESpark.ipynb en:
 
-### **Evaluacion eficencia Python con Pandas**
 
-| Sistema Operativo | Tiempo de ejecucion | Uso de CPU | Uso de memoria |
-|----------------------------|-------------------------------|-------------------|-------------------------|
- | Windows 10            | 112.2 segundos         | 26.8%            | 40.4%                   |
- | macOS Catalina     | 153.05 segundos       | 19.8%            | 37.3%                   |
- | Red Hat 9                | Canonical                   | Open So       | 20.04.2 LTS         |
+### **Evaluacion eficencia Python con Pandas.**
+#### **Se realizaron pruebas en:**
 
-### Evaluacion eficencia Spark
-
- | Sistema Operativo | Tiempo de ejecucion | Uso de CPU | Uso de memoria |
- |----------------------------|-------------------------------|-------------------|-------------------------|
- | Windows 10            | 86.69 segundos         | 75.7%           | 47.8%                   |
- | macOS Catalina     | 181.68                           | 27.8%   | 51.9%                 |
- | Red Hat 9                | Canonical                  | Open So        | 20.04.2 LTS         |
+| Sistema Operativo | Tiempo de ejecucion | Uso de CPU    | Uso de memoria |
+|-------------------|---------------------|---------------|----------------|
+| Windows 10        | 112.2 segundos      | 26.8%         | 40.4%          |
+| macOS Catalina    | 153.05 segundos     | 19.8%         | 37.3%          |
+| Red Hat 9         | Error Kernel        | Error Kernel  | Error Kernel   |
 
 
+<li><span style="color:red">El resultado de Red Hat de Python con Pandas se detuvo.</span></li>
 
 
-### **Se realizaron pruebas en:**
+### **Evaluacion eficencia Spark.**
+#### **Se realizaron pruebas en:**
+
+| Sistema Operativo | Tiempo de ejecucion | Uso de CPU    | Uso de memoria |
+|-------------------|---------------------|---------------|----------------|
+| Windows 10        | 86.69 segundos      | 75.7%         | 47.8%          |
+| macOS Catalina    | 181.68 segundos     | 27.8%         | 51.9%          |
+| Red Hat 9         | Aprox 120 segundos  | Aprox 36.66%  | Aprox 31%      |
+
+
+<li><span style="color:red">El resultado de Red Hat con Spark fue aproximado.</span></li>
+<li><span style="color:red">Solo genero una grafica y se paro el servicio.</span></li>
+<li><span style="color:red">Posiblemente el error con Red Hat 9 se debio a su virtualización y restriccion en el tamaño del disco duro virtual con tenia 31 GB de espacio.</span></li>
+
+
+
+### **Detalles tecnicos y Demostración de ejecución:**
 
 ### - Windows 10
 - - Procesador i5 de 9th Generacion 2.30 GHz con 8 nucleos
@@ -189,22 +201,10 @@ Para las solicitudes de análisis en Spark implemente el archivo ADESpark.ipynb 
 - - Disco Duro NVME de 1TB
 
 #### Python con pandas Win 10
-<img src="rp_win.png" width="600" height="400">
+<img src="/img/rp_win.png" width="600" height="400">
 
 #### Spark Win 10
-<img src="rs_win.png" width="600" height="400">
-
-
-### - Red Hat 9 (Maquina Virtual en Virtual Box)
-- - Procesador i5 de 9th Generacion 2.30 GHz con 4 nucleos
-- - Memoria RAM 8 GB
-- - Disco Duro NVME de 60GB
-
-#### Python con pandas Red Hat 9
-<img src="rp_redh.png" width="600" height="400"> 
-
-#### Spark Red Hat 9
-<img src="rs_redh.png" width="600" height="400">
+<img src="/img/rs_win.png" width="600" height="400">
 
 
 ### - Osx Catalina
@@ -213,10 +213,27 @@ Para las solicitudes de análisis en Spark implemente el archivo ADESpark.ipynb 
 - - Disco Duro SSD de 512GB
 
 #### Python con pandas Osx Catalina
-<img src="rp_osx.png" width="600" height="400">
+<img src="/img/rp_osx.png" width="600" height="400">
 
 #### Spark Osx Catalina
-<img src="rs_osx.png" width="600" height="400">
+<img src="/img/rs_osx.png" width="600" height="400">
+
+
+### - Red Hat 9 (Maquina Virtual en Virtual Box)
+- - Procesador i5 de 9th Generacion 2.30 GHz con 4 nucleos
+- - Memoria RAM 8 GB
+- - Disco Duro NVME de 31GB
+
+#### Error en Python con pandas Red Hat 9
+<img src="/img/rp_redh.png" width="600" height="400"> 
+
+#### Spark Red Hat 9
+<img src="/img/rs_redh.png" width="600" height="400">
+
+#### Error en Spark Red Hat 9
+<img src="/img/rs_redh-error.png" width="600" height="400">
+
+
 
 
 # 7. Conclusión
